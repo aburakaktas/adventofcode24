@@ -8,12 +8,11 @@ for line in lines:
     left.append(int(temp[0]))
     right.append(int(temp[1]))
 
-left_sorted = sorted(left)
-right_sorted = sorted(right)
-length = len(left_sorted)
-
+length = len(left)
 result = 0
 for i in range(length):
-    difference = abs(left_sorted[i] - right_sorted[i])
-    result += difference
+    count = right.count(left[i])
+    similarity_score = left[i] * count
+    result += similarity_score
+
 print(result)
