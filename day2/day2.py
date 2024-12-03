@@ -5,23 +5,17 @@ def main():
         lines = file.readlines()
 
     safe_count = 0
-    report_count = 1
     for line in lines:
         report = [int(x) for x in line.split()]
-        # print(report)
-        # print(report_count)
-        report_count += 1
-        
-        if is_increasing(report) or is_decreasing(report):
-            pass
-            if check_diff(report):
-                safe_count += 1
+        if process_report(report):
+            safe_count += 1
     print(safe_count)
 
+def process_report(report):
+    return (is_increasing(report) or is_decreasing(report)) and check_diff(report)
 
 
 # check difference is btw 1 to 3
-
 def check_diff(report):
     length = len(report)
 
