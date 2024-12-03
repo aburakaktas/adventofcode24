@@ -1,1 +1,3 @@
 # adventofcode24
+
+Hi 🌞
