@@ -6,6 +6,7 @@ with open('input.txt', 'r') as file:
     text = file.read()
 
 matches = re.findall(pattern, text, flags=re.DOTALL)
+print(matches)
 
 total = 0
 for x , y in matches:
