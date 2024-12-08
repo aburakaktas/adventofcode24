@@ -17,7 +17,7 @@ def main():
         (1, -1), # down-left
         (-1, 1), # up-right
     ]
-
+    
     xmas_count = 0
     for i in range(length_y):
         for j in range(length_x):
