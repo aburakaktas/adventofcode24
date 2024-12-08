@@ -13,15 +13,15 @@ def main():
 
     directions = [
         (1, 1),  # down-right
-        (-1, -1),  # up-left
-        (1, -1),  # down-left
-        (-1, 1),  # up-right
+        (-1, -1), # up-left
+        (1, -1), # down-left
+        (-1, 1), # up-right
     ]
 
     xmas_count = 0
     for i in range(length_y):
         for j in range(length_x):
-            if grid[i][j] == "A":
+            if grid[i][j] == 'A':
                 # first letter is A
                 for dx, dy in directions:
                     word = ""
@@ -36,6 +36,7 @@ def main():
                         break
                     if word == "MSMS":
                         xmas_count += 1
+                    
 
     print(xmas_count)
 
@@ -44,6 +45,7 @@ def boundary_check(i, j, length_x, length_y):
     if 0 <= i < length_y and 0 <= j < length_x:
         return True
     return False
+
 
 
 if __name__ == "__main__":
